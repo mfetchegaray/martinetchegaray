@@ -1,0 +1,13 @@
+.Footer {
+  @apply  flex flex-col items-center justify-center w-full px-6 pt-12 mx-auto text-2xl font-bold text-center text-white bg-primary;
+}
+
+.copyright {
+  @apply w-full py-3 mx-auto mt-24 text-left bg-primary max-w-7xl;
+}
+
+.copyright p {
+  @apply font-sans text-base;
+}
+
+
