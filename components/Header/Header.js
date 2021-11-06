@@ -1,7 +1,5 @@
-// import Link from "next/link"
 import NextLink from "next/link";
 import Headroom from "react-headroom";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 import Link from "next/link";
 
 export default function Header() {
@@ -16,15 +14,13 @@ export default function Header() {
           </NextLink>
           <div className="pageNav">
             <div className="pageNavInside">
-              {routes.map((route, i) => {
-                return (
-                  <Link href={route.slug} key={route.slug}>
-                    <a alt={route.ariaLabel} title={route.ariaLabel} aria-label={route.ariaLabel}>
-                      {route.title}
-                    </a>
-                  </Link>
-                );
-              })}
+              {routes.map((route, i) => (
+                <Link href={route.slug} key={route.slug}>
+                  <a alt={route.ariaLabel} title={route.ariaLabel} aria-label={route.ariaLabel}>
+                    {route.title}
+                  </a>
+                </Link>
+              ))}
             </div>
           </div>
           <div className="absolute hidden ml-0 text-xl md:block lg:right-0 right-32">
@@ -44,12 +40,17 @@ const routes = [
   },
   {
     title: "About",
-    slug: "/",
+    slug: "/about",
     ariaLabel: "See About",
   },
   {
     title: "Contact",
-    slug: "/",
+    slug: "/contact",
     ariaLabel: "See contact",
+  },
+  {
+    title: "Otra pagina",
+    slug: "/otra-pagina",
+    ariaLabel: "Visita mi otra pagina",
   },
 ];
